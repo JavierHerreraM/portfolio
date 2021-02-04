@@ -1,0 +1,284 @@
+$title-font: "Open Sans",
+sans-serif;
+$body-font: "Roboto",
+sans-serif;
+$font-sizes: (1, 1.25, 1.563, 3.815);
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* // phones */
+@media screen and (max-width: 576px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+/* // portrait tablets */
+@media screen and (min-width: 577px) and (max-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+/* // landscape tablets */
+@media screen and (min-width: 769px) and (max-width: 992px) {
+  html {
+    font-size: 18px;
+  }
+}
+
+/* // small desktop */
+@media screen and (min-width: 993px) and (max-width: 1200px) {
+  html {
+    font-size: 18px;
+  }
+}
+
+/* // big desktops */
+@media screen and (min-width: 1201px) {
+  html {
+    font-size: 20px;
+  }
+}
+
+body {
+  background-color: #fafafa;
+}
+
+h1 {
+  font-family: $title-font;
+  font-size: #{nth($font-sizes, 4)}rem;
+  font-weight: 800;
+}
+
+h2 {
+  font-family: $body-font;
+  font-size: #{nth($font-sizes, 3)}rem;
+  font-weight: 700;
+  letter-spacing: 4px;
+}
+
+h3 {
+  font-family: $body-font;
+  font-size: #{nth($font-sizes, 3)}rem;
+  font-weight: 500;
+}
+
+h4 {
+  font-family: $body-font;
+  font-size: #{nth($font-sizes, 1)}rem;
+  font-weight: 500;
+}
+
+a {
+  font-family: $body-font;
+  font-size: #{nth($font-sizes, 2)}rem;
+  font-weight: 400;
+}
+
+p {
+  font-family: $body-font;
+  font-size: #{nth($font-sizes, 1)}rem;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+// paddings and margins
+$sizes: (1, 2, 3, 4, 5);
+$space-scale: (0.5, 1, 1.5, 2, 3);
+//originals where: 0.8, 1, 1.25, 1.563, 3.815
+
+@each $size in $sizes {
+  .p-#{$size} {
+    padding: #{nth($space-scale, $size)}rem;
+  }
+
+  .px-#{$size} {
+    padding-left: #{nth($space-scale, $size)}rem;
+    padding-right: #{nth($space-scale, $size)}rem;
+  }
+
+  .py-#{$size} {
+    padding-top: #{nth($space-scale, $size)}rem;
+    padding-bottom: #{nth($space-scale, $size)}rem;
+  }
+
+  .pl-#{$size} {
+    padding-left: #{nth($space-scale, $size)}rem;
+  }
+
+  .pt-#{$size} {
+    padding-top: #{nth($space-scale, $size)}rem;
+  }
+
+  .pr-#{$size} {
+    padding-right: #{nth($space-scale, $size)}rem;
+  }
+
+  .pb-#{$size} {
+    padding-bottom: #{nth($space-scale, $size)}rem;
+  }
+
+  .m-#{$size} {
+    margin: #{nth($space-scale, $size)}rem;
+  }
+
+  .mx-#{$size} {
+    margin-left: #{nth($space-scale, $size)}rem;
+    margin-right: #{nth($space-scale, $size)}rem;
+  }
+
+  .my-#{$size} {
+    margin-top: #{nth($space-scale, $size)}rem;
+    margin-bottom: #{nth($space-scale, $size)}rem;
+  }
+
+  .ml-#{$size} {
+    margin-left: #{nth($space-scale, $size)}rem;
+  }
+
+  .mt-#{$size} {
+    margin-top: #{nth($space-scale, $size)}rem;
+  }
+
+  .mr-#{$size} {
+    margin-right: #{nth($space-scale, $size)}rem;
+  }
+
+  .mb-#{$size} {
+    margin-bottom: #{nth($space-scale, $size)}rem;
+  }
+}

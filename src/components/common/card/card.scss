@@ -1,0 +1,55 @@
+@import "../../styles/colors";
+
+.card {
+  width: auto;
+  max-width: 70%;
+  background-color: $secondary-color;
+  border-radius: 10px;
+  margin-right: 0.5rem;
+  margin-left: 0.5rem;
+  flex-grow: 1;
+}
+
+.card-img {
+  width: 100%;
+  height: 250px;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+}
+
+.card-body button {
+  background-color: $secondary-color;
+}
+
+.card-text p {
+  margin-bottom: 1rem;
+}
+
+/* // portrait tablets */
+@media screen and (max-width: 768px) {
+  .card {
+    max-width: none;
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1200px) {
+  .card {
+    width: 40%;
+
+  }
+
+}
+
+@media screen and (min-width: 1201px) {
+  .card {
+    width: 30%;
+
+  }
+}

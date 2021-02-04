@@ -1,0 +1,9 @@
+@import "../../styles/colors";
+
+.canvas {
+  min-height: calc(100vh - 50px);
+  width: 100%;
+  color: $black-color;
+  background-color: $white-color;
+  transition: none;
+}

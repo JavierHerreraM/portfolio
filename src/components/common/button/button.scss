@@ -1,0 +1,34 @@
+@import "../../styles/colors";
+
+.btn-box {
+  display: flex;
+  justify-content: center;
+}
+
+.default-btn {
+  display: block;
+  height: 2rem;
+  width: 100%;
+  min-width: fit-content;
+  max-width: 350px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 1rem;
+  color: $primary-color;
+  text-decoration: none;
+  cursor: pointer;
+  border: 2px solid $primary-color;
+  border-radius: 10px;
+  transition: color 0.3s,
+    background-color 0.3s;
+
+  &:focus,
+  &:hover,
+  &:active {
+    color: $white-color;
+    background-color: $primary-color;
+  }
+}
