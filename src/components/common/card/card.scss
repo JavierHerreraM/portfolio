@@ -1,6 +1,8 @@
-@import "../../styles/colors";
+@import "../../../modules/styles/colors";
 
 .card {
+  display: flex;
+  flex-direction: column;
   width: auto;
   max-width: 70%;
   background-color: $secondary-color;
@@ -24,12 +26,12 @@
   }
 }
 
-.card-body button {
-  background-color: $secondary-color;
-}
-
 .card-text p {
   margin-bottom: 1rem;
+}
+
+.card .btn-box {
+  margin-top: auto;
 }
 
 /* // portrait tablets */

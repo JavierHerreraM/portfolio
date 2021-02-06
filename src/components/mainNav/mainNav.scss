@@ -1,4 +1,4 @@
-@import "../styles/colors";
+@import "../../modules/styles/colors";
 
 .nav-box {
   display: flex;
@@ -90,17 +90,6 @@
     li {
       width: 35%;
     }
-  }
-}
-
-@media screen and (orientation: landscape) and (max-width: 992px) {
-  .nav-links {
-    height: 100%;
-  }
-
-  .circle {
-    width: 30px;
-    height: 30px;
   }
 }
 

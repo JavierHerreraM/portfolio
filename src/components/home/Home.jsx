@@ -4,7 +4,7 @@ import { Helmet } from 'react-helmet';
 import Button from '../common/button/Button';
 import "./home.scss";
 
-
+// * In small to medium sizes the content of the about gets reduce
 function Home() {
   const isBigScreen = useMediaQuery({ query: '(min-device-width: 992px)' })
 
@@ -33,7 +33,7 @@ function Home() {
         <div className='about'>
           <p>
             Me llamo Javier, soy desarrollador web y estoy aquí para ayudarte a crear la página web que necesitas.
-            {isBigScreen && "Desde páginas con bases de datos y alta seguridad, SPAs con variedad de animaciones y diseños o tu propia API yo puedo ayudarte a hacerlo realidad."}
+            {isBigScreen && " Desde páginas con bases de datos y alta seguridad, SPAs con variedad de animaciones y diseños o tu propia API yo puedo ayudarte a hacerlo realidad."}
           </p>
         </div>
         <Button btnLink='/proyectos' btnText='VER PROYECTOS' classes='home-btn' />

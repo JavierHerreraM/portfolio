@@ -1,4 +1,4 @@
-@import "../../styles/colors";
+@import "../../../modules/styles/colors";
 
 .link-box {
   display: flex;
@@ -11,8 +11,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 45px;
-  height: 45px;
+  min-width: 45px;
+  min-height: 45px;
   font-size: 18px;
   border: 2px solid $primary-color;
   border-radius: 50%;

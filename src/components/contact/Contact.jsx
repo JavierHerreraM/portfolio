@@ -6,6 +6,7 @@ import { Helmet } from 'react-helmet';
 import IconBox from "../common/iconBox/IconBox";
 import './contact.scss'
 
+// * When the link is undefined it means that it goes no where and also that the link doesnt open in a new tab
 function App() {
   return (
     <>
@@ -23,17 +24,17 @@ function App() {
           text="GitHub"
         />
         <IconBox
-          link="#"
+          link={undefined}
           icon={<FontAwesomeIcon icon={faAt} />}
           text="Javiherreramad@gmail.com"
         />
         <IconBox
-          link="#"
+          link={undefined}
           icon={<FontAwesomeIcon icon={faPhoneAlt} />}
           text="85910897"
         />
         <IconBox
-          link="#"
+          link={undefined}
           icon={<FontAwesomeIcon icon={faFileAlt} />}
           text="Descargue mi CV"
         />

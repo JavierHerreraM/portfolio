@@ -1,7 +1,7 @@
 import React from "react";
 import "./canvas.scss";
 
-import MainNav from '../../mainNav/MainNav'
+import MainNav from '../mainNav/MainNav'
 
 function Canvas(props) {
   return (

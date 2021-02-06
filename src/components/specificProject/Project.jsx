@@ -5,15 +5,13 @@ import { Helmet } from 'react-helmet';
 import Button from "../common/button/Button";
 import IconBox from "../common/iconBox/IconBox";
 import "./project.scss";
-
-import projects from '../projectsInfo/projectsInfo';
+import projectsInfo from '../../modules/projectsInfo/projectsInfo';
 
 function Project(props) {
   let projectIndex = props.match.params.numero;
   projectIndex = projectIndex.substring(1);
 
-  // const project = projects[projectIndex];
-  const { title, gitHubLink, description, flags, images, btnLink } = projects[projectIndex];
+  const { title, gitHubLink, description, flags, images, btnLink } = projectsInfo[projectIndex];
 
   return (
     <>
@@ -48,15 +46,15 @@ function Project(props) {
           ))}
         </div>
 
-        <Button classes="mb-3" btnLink={btnLink} btnText="VER PAGINA" />
+        <Button classes="mb-3" btnLink={btnLink} btnPage={btnLink} btnText="VER PAGINA" />
 
         <div className="example-img">
-          {images.map((obj, index) => {
+          {images.map((img, index) => {
             return (
               <div key={index} className='img-holder'>
                 <img
-                  src={obj.imgUrl}
-                  alt={obj.alt}
+                  src={img.imgUrl}
+                  alt={img.alt}
                   className="mb-2"
                 ></img>
               </div>

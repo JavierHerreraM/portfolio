@@ -2,11 +2,12 @@ import React from "react";
 import "./iconBox.scss";
 
 function IconBox(props) {
+  const { classes, link, icon, text } = props;
   return (
     <>
-      <a className={`link-box ${props.classes}`} href={props.link}>
-        <div className="circle">{props.icon}</div>
-        {props.text && <p className="pl-3">{props.text}</p>}
+      <a className={`link-box ${classes}`} href={link} target="_blank" rel="noopener noreferrer">
+        <div className="circle">{icon}</div>
+        {text && <p className="pl-3">{text}</p>}
       </a>
     </>
   );

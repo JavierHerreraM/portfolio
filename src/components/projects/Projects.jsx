@@ -1,7 +1,7 @@
 import React from "react";
 import { Helmet } from 'react-helmet';
 import Card from "../common/card/Card";
-import projects from '../projectsInfo/projectsInfo';
+import projectsInfo from '../../modules/projectsInfo/projectsInfo';
 import './projects.scss';
 
 function Projects() {
@@ -9,7 +9,7 @@ function Projects() {
     <>
       <Helmet><title>Proyectos - Javier Herrera</title></Helmet>
       <div className='projects'>
-        {projects.map((project, index) => (
+        {projectsInfo.map((project, index) => (
           <Card
             key={index}
             classes=" mb-3 project"
