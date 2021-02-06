@@ -46,7 +46,7 @@ function Project(props) {
           ))}
         </div>
 
-        <Button classes="mb-3" btnLink={btnLink} btnPage={btnLink} btnText="VER PAGINA" />
+        <Button classes="mb-3" externalLink={true} btnLink={btnLink} btnText="VER PAGINA" />
 
         <div className="example-img">
           {images.map((img, index) => {
