@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import { Helmet } from 'react-helmet';
@@ -12,6 +12,23 @@ function Project(props) {
   projectIndex = projectIndex.substring(1);
 
   const { title, gitHubLink, description, flags, images, btnLink } = projectsInfo[projectIndex];
+
+  let [openImg, setOpenImg] = useState(0);
+  function handleImgClick(number) {
+    console.log(number);
+
+    if (openImg > 0) {
+
+      console.log('close');
+      setOpenImg(0);
+
+    } else {
+
+      console.log('open');
+      setOpenImg(number);
+
+    }
+  }
 
   return (
     <>
@@ -55,13 +72,13 @@ function Project(props) {
                 <img
                   src={img.imgUrl}
                   alt={img.alt}
-                  className="mb-2"
+                  className={`mb-2 ${openImg === index ? 'openImg' : undefined}`}
+                  onClick={() => handleImgClick(index + 1)}
                 ></img>
               </div>
             );
           })}
         </div>
-
       </div>
     </>
   );

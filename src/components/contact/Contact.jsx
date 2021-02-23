@@ -5,6 +5,7 @@ import { faAt, faPhoneAlt, faFileAlt } from "@fortawesome/free-solid-svg-icons";
 import { Helmet } from 'react-helmet';
 import IconBox from "../common/iconBox/IconBox";
 import './contact.scss'
+import cv from './CV-JavierHerrera.pdf';
 
 // * When the link is undefined it means that it goes no where and also that the link doesnt open in a new tab
 function App() {
@@ -34,7 +35,7 @@ function App() {
           text="85910897"
         />
         <IconBox
-          link={undefined}
+          link={cv}
           icon={<FontAwesomeIcon icon={faFileAlt} />}
           text="Descargue mi CV"
         />
