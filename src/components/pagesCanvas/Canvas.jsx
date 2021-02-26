@@ -1,15 +1,22 @@
 import React from "react";
+import PropTypes from 'prop-types';
+import MainNav from '../mainNav/MainNav'
 import "./canvas.scss";
 
-import MainNav from '../mainNav/MainNav'
-
 function Canvas(props) {
-  return (
-    <>
-      <MainNav />
-      <div className="canvas p-2">{props.children}</div>
-    </>
-  );
-}
+  const { children } = props;
+  return <>
+    <MainNav />
+    <div className="canvas p-2">
+      <div className="container">
+        {children}
+      </div>
+    </div>
+  </>;
+};
+
+Canvas.propTypes = {
+  children: PropTypes.element
+};
 
 export default Canvas;

@@ -3,7 +3,44 @@
 .canvas {
   min-height: calc(100vh - 50px);
   width: 100%;
+  display: flex;
+  justify-content: center;
   color: $black-color;
   background-color: $white-color;
   transition: none;
+}
+
+/* // phones */
+@media screen and (max-width: 576px) {
+  .container {
+    width: 100%;
+  }
+}
+
+/* // portrait tablets */
+@media screen and (min-width: 577px) and (max-width: 768px) {
+  .container {
+    max-width: 540px;
+  }
+}
+
+/* // landscape tablets */
+@media screen and (min-width: 769px) and (max-width: 992px) {
+  .container {
+    max-width: 720px;
+  }
+}
+
+/* // small desktop */
+@media screen and (min-width: 993px) and (max-width: 1200px) {
+  .container {
+    max-width: 960px;
+  }
+}
+
+/* // big desktops */
+@media screen and (min-width: 1201px) {
+  .container {
+    max-width: 1140px;
+  }
 }

@@ -9,7 +9,7 @@
   height: calc(100vh - (50px + 2rem));
 }
 
-.container {
+.title-container {
   height: 0;
   width: 75%;
   padding-top: (200 / 419) * 75%;
@@ -110,26 +110,22 @@
   max-width: 60%;
   padding-top: 2rem;
   text-align: center;
-
-  & p {
-    margin-bottom: 0.5rem;
-  }
+  margin-bottom: 2rem;
 }
 
 .home-btn {
-  padding-top: 2rem 0 0;
   width: 50%;
 }
 
 @media screen and (min-width: 577px) and (max-width: 992px) {
-  .container {
+  .title-container {
     width: 50%;
     padding-top: (200 / 419) * 50%;
   }
 }
 
 @media screen and (min-width: 993px) {
-  .container {
+  .title-container {
     width: 35%;
     padding-top: (200 / 419) * 35%;
   }
