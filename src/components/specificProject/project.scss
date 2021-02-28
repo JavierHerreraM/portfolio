@@ -59,6 +59,33 @@
   }
 }
 
+.img-holder.open-img {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.75);
+  border-radius: 0px;
+
+  img {
+    width: auto;
+    height: auto;
+    max-height: 80%;
+    transition: none;
+  }
+
+  img:hover {
+    transform: none;
+  }
+
+}
+
 /* // portrait tablets */
 @media screen and (min-width: 577px) and (max-width: 768px) {
   .img-holder {

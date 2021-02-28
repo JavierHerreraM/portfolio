@@ -16,10 +16,10 @@ function Project(props) {
   const { title, gitHubLink, description, flags, images, btnLink } = projectsInfo[projectIndex];
 
   // TODO: make it open the images
-  let [openImg, setOpenImg] = useState(0);
+  let [openImg, setOpenImg] = useState(false);
   let handleImgClick = (number) => {
-    if (openImg > 0) {
-      setOpenImg(0);
+    if (number === openImg) {
+      setOpenImg(false);
     } else {
       setOpenImg(number);
     }
@@ -60,12 +60,11 @@ function Project(props) {
       <div className="example-img">
         {images.map((img, index) => {
           return (
-            <div key={index} className='img-holder'>
+            <div key={index} className={`img-holder ${openImg === index ? 'open-img' : undefined}`} onClick={() => handleImgClick(index)}>
               <img
                 src={img.imgUrl}
                 alt={img.alt}
-                className={`mb-2 ${openImg === index ? 'openImg' : undefined}`}
-                onClick={() => handleImgClick(index + 1)}
+                className="mb-2"
               ></img>
             </div>
           );
