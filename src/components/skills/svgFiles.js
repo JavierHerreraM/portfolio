@@ -12,6 +12,7 @@ import react from "../../modules/svg/react.svg";
 import redux from "../../modules/svg/redux.svg";
 import restApi from "../../modules/svg/restApi.svg";
 import sass from "../../modules/svg/sass.svg";
+import mySQL from "../../modules/svg/mysql.svg";
 
 // * Just an import module for order and setting the parameters of the icons
 
@@ -32,5 +33,6 @@ export const back = [
   { logo: mongodb, title: "MongoDB", width: "80px" },
   { logo: mongoose, title: "Mongoose", width: "80px" },
   { logo: restApi, title: "Rest API", width: "55px" },
+  { logo: mySQL, title: "MySQL", width: "60px" },
   { logo: github, title: "Github", width: "55px" },
 ];
